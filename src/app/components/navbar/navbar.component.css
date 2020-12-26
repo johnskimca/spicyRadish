@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #E51010;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+}
+.navbar .navbar-nav> li > a {
+  color: white;
+  /*font-family: Mate;*/
+
+}
+.navbar-brand {
+  color: white;
+  /*font-family: Mate;*/
+
+}
+
+
+

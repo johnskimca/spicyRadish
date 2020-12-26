@@ -1,0 +1,26 @@
+.jumbotron.jumbotron-fluid {
+  padding-bottom: 32px;
+}
+
+.container {
+  text-align: center;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.card-price {
+  text-align: end;
+}
+
+.card-button{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+button {
+  display: inline-block;
+}

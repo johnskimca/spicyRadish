@@ -1,0 +1,30 @@
+.inventory-body {
+  background: url('../../../assets/landingPage - Fried Rice High Res.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 3%;
+}
+
+#content{
+  text-align: center;
+  padding-top: 13%;
+  color: 	white;
+}
+
+h1 {
+  padding-bottom: 1%;
+}
+
+h3 {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+h5 {
+  padding-top: 1%;
+}
+
+
+
+/*font-family: 'Mate', serif;*/
+/*font-family: 'Righteous', cursive;*/
