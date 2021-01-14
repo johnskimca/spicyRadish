@@ -9,6 +9,7 @@ import { MenuPageComponent } from './menu-page/menu-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutPageComponent } from './about-page/about-page.component';
     NavbarComponent,
     LandingPageComponent,
     MenuPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     CommonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule { }

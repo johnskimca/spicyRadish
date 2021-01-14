@@ -12,8 +12,34 @@
 .navbar-brand {
   color: white;
   /*font-family: Mate;*/
-
 }
 
+.nav-item.active {
+  display: flex;
+}
+
+svg.bi.bi-bag {
+  margin-top: 25%;
+}
+
+.badge-wrapper {
+  position: relative;
+}
+
+.badge {
+  margin-left: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  padding: .1em .4em;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+#bagIcon {
+  cursor: pointer;
+}
 
 
