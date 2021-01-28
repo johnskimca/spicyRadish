@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ModalComponent } from './modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ModalComponent } from './modal/modal.component';
     BrowserModule,
     NgbModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

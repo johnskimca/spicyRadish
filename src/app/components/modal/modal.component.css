@@ -1,8 +1,3 @@
-#submit {
-  background-color: #E51010;
-  color: white;
-
-}
 
 .cart-header {
   font-weight: bold;
@@ -52,14 +47,14 @@
 
 .btn-danger {
   color: white;
-  background-color: #EB5757;
+  background-color: #E51010;
   border: none;
   border-radius: .3em;
   font-weight: bold;
 }
 
 .btn-danger:hover {
-  background-color: #CC4C4C;
+  background-color: #FF0000;
 }
 
 .cart-quantity-input {

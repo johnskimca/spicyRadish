@@ -4,7 +4,6 @@
     <p class="lead">a wokstar's creations prepared fresh </p>
   </div>
 </div>
-
 <div class="menuContainer">
   <div class="card" *ngFor="let menuItem of menuItems" style="width: 20rem;" >
     <img class="card-img-top" src="{{menuItem.picture}}" alt="Card image cap">
@@ -13,7 +12,8 @@
       <p class="card-text">{{menuItem.description}}</p>
       <h5 class="card-price">{{menuItem.price}}</h5>
       <p></p>
-      <div class="card-button"><a href="#"><button>Order Now</button></a>
+<!--      on click, need to call menu item service's addTo Cart Function-->
+      <div class="card-button"><button (click)="cartService.addToCart(menuItem)">Order Now</button>
     </div>
   </div>
 
