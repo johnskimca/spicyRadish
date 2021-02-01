@@ -16,6 +16,8 @@ export class ModalComponent implements OnInit {
   listOfCartItems;
   // need an event emitter here?
   form;
+  formArray;
+  payload: any;
   getCartItems(): void {
     this.listOfCartItems = this.cartService.getlistOfCartItems();
   }
@@ -25,10 +27,17 @@ export class ModalComponent implements OnInit {
   }
   getQuantitiesForm(): void {
     this.form = this.cartService.getQuantitiesForm();
+    this.formArray = this.form.get('quantitiesList') as FormArray;
     console.log(this.form);
   }
   onSubmit(): void {
-    console.log(this.form);
+    this.payload = {
+      listOfCartItems: this.listOfCartItems,
+      total: this.total
+    };
+    console.log(this.payload);
+
+  // here, clear from local session if need be
   }
   // use this listOfCartItems to A test then B render
   constructor(public activeModal: NgbActiveModal, public cartService: CartService, private fb: FormBuilder) {}

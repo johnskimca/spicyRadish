@@ -5,7 +5,7 @@
   </button>
 </div>
 <div class="modal-body">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form">
     <section class="container content-section">
       <div class="cart-row">
         <span class="cart-item cart-header cart-column">ITEM</span>
@@ -19,13 +19,9 @@
             <span class="cart-item-title">{{cartItem.title}}</span>
           </div>
           <span class="cart-price cart-column">{{cartItem.price}}</span>
-    <!--        maybe I can just but the formArray ngFor here-->
-    <!--        https://stackoverflow.com/questions/45346616/ngfor-with-multiple-arrays-->
           <div class="cart-quantity cart-column">
-    <!--          upon change of quantity to the specified item, change the cartitem's quantity-->
-    <!--          pass in the cartItem into a function on click and have that update-->
-            <input class="cart-quantity-input" type="number" formControlName="{{i}}">
-            <button class="btn btn-danger" type="button">REMOVE</button>
+            <input class="cart-quantity-input" type="number" formControlName="{{i}}" (change)="cartService.setItemQuantity(i, formArray.at(i).value)" (click)="getTotal()">
+            <button class="btn btn-danger" (click)="cartService.removeAt(i); getTotal()" type="button">REMOVE</button>
           </div>
         </div>
       </div>
@@ -33,7 +29,7 @@
         <strong class="cart-total-title">Total</strong>
         <span class="cart-total-price">{{total}}</span>
       </div>
-      <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+      <button class="btn btn-primary btn-purchase" type="button" (click)="onSubmit(); activeModal.dismiss('Cross click')">PURCHASE</button>
     </section>
   </form>
 </div>

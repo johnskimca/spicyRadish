@@ -24,11 +24,26 @@ export class CartService {
       this.addFormControl();
     }
   }
+  removeAt(index): void {
+    const removedItem = this.listOfCartItems.splice(index, 1);
+    this.removeFormControl(index);
+    this.cartItemSet.delete(removedItem[0].title);
+  }
   get quantitiesList(): FormArray {
     return this.form.get('quantitiesList') as FormArray;
   }
+
+  setItemQuantity(index, value): void {
+    this.listOfCartItems[index].quantity = value;
+    console.log(this.listOfCartItems);
+  }
   addFormControl(): void {
     this.quantitiesList.push(new FormControl(1));
+  }
+  removeFormControl(index): void {
+    this.quantitiesList.removeAt(index);
+    console.log(this.listOfCartItems);
+    console.log(this.quantitiesList);
   }
   getlistOfCartItems(): CartItem[] {
     return this.listOfCartItems;
@@ -37,10 +52,13 @@ export class CartService {
     return this.form;
   }
   cartItemTotals(): number {
+    // tslint:disable-next-line:prefer-const
+    let subTotal = 0;
+    // this.total = 0;
     for (const cartItem of this.listOfCartItems){
-      this.total = cartItem.price * cartItem.quantity + this.total;
+      subTotal += cartItem.price * cartItem.quantity;
     }
-    return this.total;
+    return subTotal;
   }
   constructor(private fb: FormBuilder) { }
 }
