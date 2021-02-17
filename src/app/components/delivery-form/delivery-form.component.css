@@ -1,0 +1,18 @@
+.container {
+  padding-top: 5%;
+}
+
+.timedAndCalendar{
+  display:flex;
+}
+
+.time{
+  width:50%;
+}
+
+.calendar{
+  width:50%;
+}
+
+
+

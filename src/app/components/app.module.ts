@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ModalComponent } from './modal/modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DeliveryFormComponent } from './delivery-form/delivery-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LandingPageComponent,
     MenuPageComponent,
     AboutPageComponent,
-    ModalComponent
+    ModalComponent,
+    DeliveryFormComponent
   ],
   imports: [
     BrowserModule,
