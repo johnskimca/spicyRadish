@@ -22,7 +22,7 @@ export class DeliveryFormComponent implements OnInit {
     }
   );
 
-  timeslots: string[] = ['6:00PM', '6:20PM', '6:40PM', '7:00PM', '7:20PM', '7:40PM', '8:30PM', '8:50PM', '9:10PM'];
+  timeslots: string[] = ['6:00 PM', '6:20 PM', '6:40 PM', '7:00 PM', '7:20 PM', '7:40 PM', '8:30 PM', '8:50 PM', '9:10 PM'];
   model: NgbDateStruct;
   date: {year: number, month: number};
 

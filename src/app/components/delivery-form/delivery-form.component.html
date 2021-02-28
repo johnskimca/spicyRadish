@@ -35,19 +35,9 @@
         <ngb-datepicker #dp [markDisabled]="isDisabled"></ngb-datepicker>
       </div>
       <div class="btn-group btn-group-toggle time" ngbRadioGroup name="radioBasic" formControlName="selectedTime">
-        <div>
+        <div *ngFor = 'let timeslot of timeslots'>
           <label ngbButtonLabel class="btn-primary">
-            <input ngbButton type="radio" [value]="1"> Real Button
-          </label>
-        </div>
-        <div>
-          <label ngbButtonLabel class="btn-primary">
-            <input ngbButton type="radio" [value]="1"> Real Button
-          </label>
-        </div>
-        <div>
-          <label ngbButtonLabel class="btn-primary">
-            <input ngbButton type="radio" [value]="1"> Real Button
+            <input ngbButton type="radio" [value]=timeslot> {{timeslot}}
           </label>
         </div>
 
