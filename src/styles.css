@@ -4,6 +4,10 @@ html, body, app-root {
   font-family: Mate;
 }
 
+.navbar {
+  z-index: 10000;
+}
+
 button {
   background-color: #E51010;
   border: none;
@@ -16,7 +20,6 @@ button {
   border-radius: 8px;
 
 }
-
 
 ngb-datepicker {
   width: 100%;
