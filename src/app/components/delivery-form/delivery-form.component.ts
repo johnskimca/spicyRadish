@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormArray, FormGroup} from '@angular/forms';
+import {FormArray, FormBuilder, FormControl, FormGroup} from '@angular/forms';
 import {NgbDateStruct, NgbCalendar, NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -10,15 +10,21 @@ import {NgbDateStruct, NgbCalendar, NgbDate} from '@ng-bootstrap/ng-bootstrap';
 })
 export class DeliveryFormComponent implements OnInit {
 
-  constructor(private calendar: NgbCalendar) {
+  constructor(private calendar: NgbCalendar, private formBuilder: FormBuilder) {
   }
-  model: NgbDateStruct;
-  date: {year: number, month: number};
   deliveryform = new FormGroup(    {
-      quantitiesList: new FormArray([
-      ])
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    mobileNumber: new FormControl('xxx-xxx-xxxx'),
+    email: new FormControl(''),
+    address: new FormControl(''),
+    selectedTime: new FormControl('')
     }
   );
+
+  timeslots: string[] = ['6:00PM', '6:20PM', '6:40PM', '7:00PM', '7:20PM', '7:40PM', '8:30PM', '8:50PM', '9:10PM'];
+  model: NgbDateStruct;
+  date: {year: number, month: number};
 
   ngOnInit(): void {
   }

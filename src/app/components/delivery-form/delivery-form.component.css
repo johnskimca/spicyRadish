@@ -1,8 +1,9 @@
 .container {
   padding-top: 5%;
+  width: 60%;
 }
 
-.timedAndCalendar{
+.timeAndCalendar{
   display:flex;
 }
 
@@ -13,6 +14,27 @@
 .calendar{
   width:50%;
 }
+
+#submitButton {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-block {
+  width: 80%;
+}
+
+.btn-group.btn-group-toggle.time {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
 
 
 

@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ModalComponent } from './modal/modal.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DeliveryFormComponent } from './delivery-form/delivery-form.component';
 
 @NgModule({
@@ -28,7 +28,8 @@ import { DeliveryFormComponent } from './delivery-form/delivery-form.component';
     NgbModule,
     AppRoutingModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

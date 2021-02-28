@@ -35,8 +35,6 @@ export class ModalComponent implements OnInit {
       listOfCartItems: this.listOfCartItems,
       total: this.total
     };
-    console.log(this.payload);
-
   // here, clear from local session if need be
   }
   // use this listOfCartItems to A test then B render

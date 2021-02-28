@@ -31,13 +31,28 @@
     </div>
     <br>
     <div class="timeAndCalendar">
-      <div class="time">
-
-      </div>
       <div class="calendar">
         <ngb-datepicker #dp [markDisabled]="isDisabled"></ngb-datepicker>
       </div>
+      <div class="btn-group btn-group-toggle time" ngbRadioGroup name="radioBasic" formControlName="selectedTime">
+        <div>
+          <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="1"> Real Button
+          </label>
+        </div>
+        <div>
+          <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="1"> Real Button
+          </label>
+        </div>
+        <div>
+          <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="1"> Real Button
+          </label>
+        </div>
+
+      </div>
     </div>
-    <input type="submit" value="submit">
+   <div id="submitButton"><button type="button" class="btn btn-primary btn-lg btn-block">Submit</button></div>
   </form>
 </div>
