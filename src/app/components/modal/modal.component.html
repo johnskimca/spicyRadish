@@ -29,7 +29,9 @@
         <strong class="cart-total-title">Total</strong>
         <span class="cart-total-price">{{total}}</span>
       </div>
-      <button class="btn btn-primary btn-purchase" type="button" (click)="onSubmit(); activeModal.dismiss('Cross click')">PURCHASE</button>
+      <a routerLink="/delivery">
+        <button class="btn btn-primary btn-purchase" type="button" (click)="onSubmit(); activeModal.dismiss('Cross click')">PURCHASE</button>
+      </a>
     </section>
   </form>
 </div>

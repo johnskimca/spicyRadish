@@ -30,12 +30,15 @@ export class ModalComponent implements OnInit {
     this.formArray = this.form.get('quantitiesList') as FormArray;
     console.log(this.form);
   }
+  getPayLoad(): any {
+    return this.payload;
+  }
   onSubmit(): void {
     this.payload = {
       listOfCartItems: this.listOfCartItems,
       total: this.total
     };
-  // here, clear from local session if need be
+    this.cartService.setPayLoad(this.payload);
   }
   // use this listOfCartItems to A test then B render
   constructor(public activeModal: NgbActiveModal, public cartService: CartService, private fb: FormBuilder) {}

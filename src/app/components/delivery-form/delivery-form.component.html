@@ -1,5 +1,19 @@
 <div class="container">
   <form [formGroup]="deliveryform" ngNativeValidate>
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="row">
+        <div class="col">Item</div>
+        <div class="col">Price</div>
+        <div class="col">Item</div>
+      </div>
+      <div class="row">
+        <div class="col">Item</div>
+        <div class="col">Price</div>
+        <div class="col">Item</div>
+      </div>
+    </div>
+
     <div class="contact-information">
       <h3>Contact Information</h3>
       <div class="row">
@@ -40,9 +54,8 @@
             <input ngbButton type="radio" [value]=timeslot> {{timeslot}}
           </label>
         </div>
-
       </div>
     </div>
-   <div id="submitButton"><button type="button" class="btn btn-primary btn-lg btn-block">Submit</button></div>
+    <div id="submitButton"><button type="button" class="btn btn-primary btn-lg btn-block">Submit</button></div>
   </form>
 </div>

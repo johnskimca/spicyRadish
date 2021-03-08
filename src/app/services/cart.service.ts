@@ -2,12 +2,11 @@ import { Injectable } from '@angular/core';
 import { CartItem } from '../model/cart-item';
 import {FormBuilder, FormControl, FormArray, FormGroup} from '@angular/forms';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+  payload: any;
   listOfCartItems: CartItem[] = [];
   cartItemSet = new Set();
   // need an event emitter here?
@@ -35,21 +34,25 @@ export class CartService {
 
   setItemQuantity(index, value): void {
     this.listOfCartItems[index].quantity = value;
-    console.log(this.listOfCartItems);
+  }
+  setPayLoad(payload): void {
+    this.payload = payload;
   }
   addFormControl(): void {
     this.quantitiesList.push(new FormControl(1));
   }
   removeFormControl(index): void {
     this.quantitiesList.removeAt(index);
-    console.log(this.listOfCartItems);
-    console.log(this.quantitiesList);
   }
   getlistOfCartItems(): CartItem[] {
     return this.listOfCartItems;
   }
   getQuantitiesForm(): any {
     return this.form;
+  }
+
+  getPayLoad(): any {
+    return this.payload;
   }
   cartItemTotals(): number {
     // tslint:disable-next-line:prefer-const
