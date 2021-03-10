@@ -37,6 +37,7 @@ export class CartService {
   }
   setPayLoad(payload): void {
     this.payload = payload;
+    console.log(this.payload)
   }
   addFormControl(): void {
     this.quantitiesList.push(new FormControl(1));

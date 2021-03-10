@@ -5,12 +5,12 @@
       <div class="row">
         <div class="col">Item</div>
         <div class="col">Price</div>
-        <div class="col">Item</div>
+        <div class="col">Quantity</div>
       </div>
-      <div class="row">
-        <div class="col">Item</div>
-        <div class="col">Price</div>
-        <div class="col">Item</div>
+      <div class="row" *ngFor="let item of payload?.listOfCartItems">
+        <div class="col"><img src="{{item.picture}}">{{item.title}}</div>
+        <div class="col">{{item.price}}</div>
+        <div class="col">{{item.quantity}}</div>
       </div>
     </div>
 
