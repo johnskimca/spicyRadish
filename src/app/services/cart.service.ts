@@ -37,6 +37,7 @@ export class CartService {
   }
   setPayLoad(payload): void {
     this.payload = payload;
+    this.listOfCartItems = [];
     console.log(this.payload);
   }
   addFormControl(): void {

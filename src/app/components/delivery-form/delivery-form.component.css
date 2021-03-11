@@ -66,6 +66,25 @@ img {
 
 .order-summary {
   font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.order-summary .col {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  color: #495057;
+}
+
+.lastOrderRow {
+  border-bottom: 0px !important;
+
+}
+
+img {
+  padding-right: 8px;
 }
 
 
