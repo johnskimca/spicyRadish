@@ -38,6 +38,7 @@ export class ModalComponent implements OnInit {
       listOfCartItems: this.listOfCartItems,
       total: this.total
     };
+    console.log(this.formArray);
     this.cartService.setPayLoad(this.payload);
   }
   // use this listOfCartItems to A test then B render

@@ -1,5 +1,5 @@
 <div class="container">
-  <form [formGroup]="deliveryform" ngNativeValidate>
+  <form (ngSubmit)="onSubmit()" [formGroup]="deliveryform" ngNativeValidate>
     <div class="order-summary">
       <h3>Order Summary</h3>
       <div class="row">

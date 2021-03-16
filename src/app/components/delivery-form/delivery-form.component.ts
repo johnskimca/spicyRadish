@@ -33,7 +33,6 @@ export class DeliveryFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.payload = this.cartService.getPayLoad();
-    console.log(this.payload);
   }
 
   isDisabled(date: NgbDateStruct): boolean {
@@ -43,5 +42,9 @@ export class DeliveryFormComponent implements OnInit {
 
   displayInformation(): void {
     console.log(this.deliveryform.get('selectedTime').value);
+  }
+
+  onSubmit(): void {
+
   }
 }
