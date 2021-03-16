@@ -45,6 +45,7 @@ export class DeliveryFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-
+  //https://stackoverflow.com/questions/34835516/how-to-submit-form-to-server-in-angular2
+  //  https://stackoverflow.com/questions/34835516/how-to-submit-form-to-server-in-angular2
   }
 }
